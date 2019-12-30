@@ -15,7 +15,7 @@ class SocialGraph:
     def shortestPath(self):
         pass
 
-    def recommendFriends(self dist=None, weightedDist=None):
+    def recommendFriends(self, dist=None, weightedDist=None):
         pass
 
 if __name__ == '__main__':

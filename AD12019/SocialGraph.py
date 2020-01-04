@@ -1,5 +1,7 @@
+import DiGraph
+
 # cria um grafo de amigos para uma rede social
-class SocialGraph:
+class SocialGraph(DiGraph.DiGraph):
     def __init__(self):
         pass
 

@@ -47,12 +47,31 @@ class DiGraph:
         else:
             print(f'type error: {type(vertex)}')
 
+    def removeVertex(self, vertex):
+        if 'Vertex' in str(type(vertex)):
+            self.vertexSet.remove(vertex)
+
+    def shortestPath(self):
+        pass
+
+    def topVertex(self, vertex, mesure, topK):
+        if mesure == 'dist':
+            pass
+        if mesure == 'weightedDist':
+            pass
+
 if __name__ == '__main__':
     vertice = Vertex('vertice')
     vertice2 = Vertex('vertice2')
+    vertice3 = Vertex('vertice3')
     aresta = Edge(vertice2, 4)
+    aresta2 = Edge(vertice3, 2)
     vertice.addEdge(aresta)
     digrafo = DiGraph({ vertice, vertice2 })
-    print(vertice)
-    print(aresta)
     digrafo.showEdges(vertice)
+    digrafo.addVertex(vertice3)
+    vertice.addEdge(aresta2)
+    digrafo.showEdges(vertice)
+    digrafo.removeVertex(vertice3)
+for vertex in digrafo.vertexSet:
+    print(vertex)

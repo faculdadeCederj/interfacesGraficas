@@ -52,13 +52,7 @@ class DiGraph:
             self.vertexSet.remove(vertex)
 
     def shortestPath(self, vertexBase, vertexDest):
-        pathDict = dict()
-        
-        for vertex in self.vertexSet:
-            pathDict[vertex] = 0
-
-        def calcDist(vertexBase): 
-            pass
+        pass
 
 
 

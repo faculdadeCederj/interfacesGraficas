@@ -1,16 +1,44 @@
+# classe de arestas
+class Edge:
+    def __init__(self, vertex, weight=1):
+        self.weight = weight
+        self.vertex = vertex
+    
+    def __str__(self):
+        return f'<{self.vertex.name}, {self.weight}>'
+
+
+
+# classe cria o objeto vertice
+class Vertex:
+    def __init__(self, name):
+        edgesSet = set()
+        self.name = name
+        self.edgesSet = edgesSet
+
+    def addEdge(self, edge):
+        if 'Edge' in str(type(edge)):
+            self.edgesSet.add(edge)
+        else:
+            print(f'type error: {type(edge)}')
+
+
+    def __str__(self):
+        edgeString = ''
+        for edge in self.edgesSet:
+            if edgeString == '':
+                edgeString += f'{edge.__str__()}'
+            else:
+                edgeString += f', {edge.__str__()}'
+        edgeString = '{' + edgeString + '}'
+        return edgeString
+
+
 #classe do digrafo
 class DiGraph:
     def __init__(self, vertexSet=set()):
-        self.vertexSet = set()
-        for name in vertexSet:
-            name = self.Vertex(name)
-            self.vertexSet.add(self.Vertex(name))
+        self.vertexSet = vertexSet
 
-    def showDigraph(self):
-        print('<', end=' ')
-        for vertex in self.vertexSet:
-            print(vertex.name, end=' ')
-        print('>')
     def showEdges(self, vertex):
         print(vertex)
 
@@ -77,41 +105,47 @@ class DiGraph:
         if mesure == 'weightedDist':
             pass
 
-    # classe cria o objeto vertice
-    class Vertex:
-        def __init__(self, name, edgesSet=set()):
-            self.name = name
-            self.edgesSet = edgesSet
-
-        def addEdge(self, vertex, weight=1):
-            if vertex in super.vertexSet:
-                edge = self.Edge(vertex, weight)
-                self.edgesSet.add(edge)
-            else:
-                print('invalid vertex')
-
-
-        def __str__(self):
-            edgeString = ''
-            for edge in self.edgesSet:
-                if edgeString == '':
-                    edgeString += f'{edge.__str__()}'
-                else:
-                    edgeString += f', {edge.__str__()}'
-            edgeString = '{' + edgeString + '}'
-            return edgeString
-
-        # classe de arestas
-        class Edge:
-            def __init__(self, vertex, weight=1):
-                self.weight = weight
-                self.vertex = vertex
-            
-            def __str__(self):
-                return f'<{self.vertex.name}, {self.weight}>'
-
-
 if __name__ == '__main__':
-    vertices = {'joao', 'rogerio', 'maria'}
+    joao = Vertex('joao')
+    pedro = Vertex('pedro')
+    julia = Vertex('julia')
+    rosicreida = Vertex('rosicreida')
+    ana = Vertex('ana')
+    luis = Vertex('luis')
+    vertices = {joao, pedro, julia, rosicreida, ana, luis}
+    
+    joao.addEdge(Edge(pedro, 2))
+    joao.addEdge(Edge(ana, 3))
+    joao.addEdge(Edge(julia, 1))
+    
+    pedro.addEdge(Edge(ana, 1))
+
+    ana.addEdge(Edge(rosicreida, 1))
+
+    rosicreida.addEdge(Edge(luis, 3))
+
+    julia.addEdge(Edge(rosicreida, 1))
+
     digrafo = DiGraph(vertices)
-    digrafo.showDigraph()
+    digrafo.showEdges(joao)
+##########################################
+
+    joaquina = Vertex('joaquina')
+    digrafo.addVertex(joaquina)
+    print('inserindo joaquina: ', end=' ')
+    for vertex in digrafo.vertexSet:
+        print(vertex.name, end=' ')
+    print()
+
+    digrafo.removeVertex(joaquina)
+    print('tirando joaquina: ', end=' ')
+    for vertex in digrafo.vertexSet:
+        print(vertex.name, end=' ')
+    print()
+
+###########################################
+
+    dji = digrafo.Dijkstra(joao, luis)
+    print('dijkstra joao >>> luis:', end=' ')
+    for vertex in dji:
+        print(vertex.name, end=' ')

@@ -115,4 +115,3 @@ if __name__ == '__main__':
     vertices = {'joao', 'rogerio', 'maria'}
     digrafo = DiGraph(vertices)
     digrafo.showDigraph()
-    digrafo..addEdge(3, )

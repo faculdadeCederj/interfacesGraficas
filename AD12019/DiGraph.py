@@ -99,9 +99,42 @@ class DiGraph:
                 return djikstraPath
 
 
-    def topVertex(self, vertex, mesure, topK):
+    def topVertex(self, baseVertex, mesure, topK):
+        costs = dict()
+        for vertex in self.vertexSet:
+            if vertex == baseVertex:
+                costs[vertex] = 0
+            else:
+                costs[vertex] = float('inf')
+
+        def calculateCost(vert, prev):
+            for edge in vert.edgesSet:
+                calc = costs[prev] + edge.weight
+                if calc < costs[edge.vertex]:
+                    costs[edge.vertex] = calc
+                calculateCost(edge.vertex, vert)
+        
+        calculateCost(baseVertex, baseVertex)
+
+        # remove neighbors and base
+        for edge in baseVertex.edgesSet:
+            costs.pop(edge.vertex)
+        costs.pop(baseVertex)
+        
         if mesure == 'dist':
-            pass
+            toplist = list()
+            while topK != 0:
+                smaller = float('inf')
+                topVert = None
+                for cost, vertex in enumerate(costs):
+                    if cost <= smaller:
+                        smaller = cost
+                        topVert = vertex
+                toplist.append(f'{topVert.name}:{smaller}')
+                topK -= 1
+            return toplist
+
+
         if mesure == 'weightedDist':
             pass
 
@@ -149,3 +182,8 @@ if __name__ == '__main__':
     print('dijkstra joao >>> luis:', end=' ')
     for vertex in dji:
         print(vertex.name, end=' ')
+    print()
+
+###########################################
+
+    print(digrafo.topVertex(joao, 'dist', 1))

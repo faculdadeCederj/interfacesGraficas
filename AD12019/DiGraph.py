@@ -103,40 +103,57 @@ class DiGraph:
         costs = dict()
         for vertex in self.vertexSet:
             if vertex == baseVertex:
-                costs[vertex] = 0
+                costs[vertex.name] = 0
             else:
-                costs[vertex] = float('inf')
+                costs[vertex.name] = float('inf')
 
-        def calculateCost(vert, prev):
+        def calculateCost(vert):
             for edge in vert.edgesSet:
-                calc = costs[prev] + edge.weight
-                if calc < costs[edge.vertex]:
-                    costs[edge.vertex] = calc
-                calculateCost(edge.vertex, vert)
+                calc = costs[vert.name] + edge.weight
+                if calc < costs[edge.vertex.name]:
+                    costs[edge.vertex.name] = calc
+                calculateCost(edge.vertex)
         
-        calculateCost(baseVertex, baseVertex)
+        calculateCost(baseVertex)
+
+        if mesure == 'weightedDist':
+            totalEdges = 0
+            toplist = list() 
+            edgesScore = dict()
+
+            for vertex in self.vertexSet:
+                edgesScore[vertex.name] = 0
+          
+            for vertex in self.vertexSet:
+                totalEdges += len(vertex.edgesSet)
+
+                for edge in vertex.edgesSet:
+                    edgesScore[edge.vertex.name] += 1
+
+            # multiply costs by total edges and removing edges num 
+            for vertex, cost in costs.items():
+                vertEdgesScore = edgesScore[vertex]
+                costs[vertex] = cost*totalEdges-vertEdgesScore
 
         # remove neighbors and base
         for edge in baseVertex.edgesSet:
-            costs.pop(edge.vertex)
-        costs.pop(baseVertex)
-        
-        if mesure == 'dist':
-            toplist = list()
-            while topK != 0:
-                smaller = float('inf')
-                topVert = None
-                for cost, vertex in enumerate(costs):
-                    if cost <= smaller:
-                        smaller = cost
-                        topVert = vertex
-                toplist.append(f'{topVert.name}:{smaller}')
-                topK -= 1
-            return toplist
+            costs.pop(edge.vertex.name)
+        costs.pop(baseVertex.name)
 
+        toplist = list()
+        while topK != 0:
+            smaller = float('inf')
+            topVert = None
+            for vertex, cost in costs.items():
+                if cost <= smaller:
+                    smaller = cost
+                    topVert = vertex
+            toplist.append(f'{topVert}:{smaller}')
+            costs.pop(topVert)
+            topK -= 1
+        return toplist
+                
 
-        if mesure == 'weightedDist':
-            pass
 
 if __name__ == '__main__':
     joao = Vertex('joao')
@@ -186,4 +203,8 @@ if __name__ == '__main__':
 
 ###########################################
 
-    print(digrafo.topVertex(joao, 'dist', 1))
+    print(digrafo.topVertex(joao, 'dist', 2))
+
+############################################
+
+    print(digrafo.topVertex(joao, 'weightedDist', 2))

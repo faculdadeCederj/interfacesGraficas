@@ -6,34 +6,47 @@ commands = sys.argv[1]
 class SocialGraph(DiGraph.DiGraph):
     def __init__(self, inputfile):
         super().__init__(self)
+
+        # opening the inputfile and writing the output in outfile
         with open(inputfile, 'r') as input:
             for line in input:
                 allcommand = line.split()
                 command = allcommand[0]
                 allcommand.pop(0)
-                arguments = ''
-                for argument in allcommand:
-                    arguments += argument + ','
-                arguments = arguments[:-1]
+                arguments = allcommand
                 with open('outfile.txt', 'a') as output:
-                    output.write(self.command(arguments))
+                    if command == 'add':
+                        output.write(self.add(arguments))
+                    elif command == 'remove':
+                        output.write(self.remove(arguments))
+                    elif command == 'showFriends':
+                        output.write(self.showFriends(arguments))
+                    elif command == 'shortestPath':
+                        output.write(self.shortestPath(arguments))
+                    elif command == 'recommendFriends':
+                        output.write(self.recommendFriends(arguments))
 
 
+    def add(self, args):
+        origin = args[0]
+        dest = args[1]
+        weight = args[2]
 
-    def add(self):
-        pass
+    def remove(self, args):
+        vertex = args[0]
 
-    def remove(self):
-        pass
+    def showFriends(self, args):
+        vertex = args[0]
 
-    def showFriends(self):
-        pass
+    def shortestPath(self, args):
+        origin = args[0]
+        dest = args[1]
 
-    def shortestPath(self):
-        pass
-
-    def recommendFriends(self, dist=None, weightedDist=None):
-        pass
+    def recommendFriends(self, args):
+        baseVertex = args[0]
+        mesure = args[1]
+        topK = args[2]
 
 if __name__ == '__main__':
+    # running must be `python3 SocialGraph.py infile.txt`
     graph = SocialGraph(commands)

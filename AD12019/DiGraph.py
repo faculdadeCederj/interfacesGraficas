@@ -96,8 +96,15 @@ class DiGraph:
                     djikstraPath.append(nextVertex)
                     nextVertex = prev[nextVertex]
                 djikstraPath = djikstraPath[::-1]
-                return djikstraPath
 
+        # formatando saida
+        returnStr = '['
+        for vert in djikstraPath:
+            returnStr += f'<{vert.name}, {cost[vert]}>,'
+        returnStr = returnStr[:-1]
+        returnStr += ']'
+
+        return returnStr
 
     def topVertex(self, baseVertex, mesure, topK):
         costs = dict()
@@ -197,9 +204,7 @@ if __name__ == '__main__':
 
     dji = digrafo.Dijkstra(joao, luis)
     print('dijkstra joao >>> luis:', end=' ')
-    for vertex in dji:
-        print(vertex.name, end=' ')
-    print()
+    print(dji)
 
 ###########################################
 

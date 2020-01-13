@@ -25,7 +25,7 @@ class SocialGraph(DiGraph.DiGraph):
                     elif command == 'shortestPath':
                         output.write(self.shortestPath(arguments))
                     elif command == 'recommendFriends':
-                        output.write(self.recommendFriends(arguments))
+                        output.write(str(self.recommendFriends(arguments)))
 
 
     def add(self, args):
@@ -40,35 +40,43 @@ class SocialGraph(DiGraph.DiGraph):
             if origin == vertex.name:
                 originExists = True
                 originVert = vertex
-                exec(f'{origin} = DiGraph.Vertex(origin)')
-                exec(f'self.addVertex({origin})')
+                #exec(f'{origin} = DiGraph.Vertex(origin)')
+                #exec(f'self.addVertex({origin})')
                 break
             
             if dest == vertex.name:
                 destExists = True
                 destVert = vertex
-                exec(f'{dest} = DiGraph.Vertex(dest)')
-                exec(f'self.addVertex({dest})')
+                #exec(f'{dest} = DiGraph.Vertex(dest)')
+                #exec(f'self.addVertex({dest})')
                 break
 
         if not originExists:
-            #originVert = DiGraph.Vertex(origin)
-            #self.addVertex(originVert)
-            exec(f'{origin} = DiGraph.Vertex(origin)')
-            exec(f'self.addVertex({origin})')
+            originVert = DiGraph.Vertex(origin)
+            self.addVertex(originVert)
+            #exec(f'{origin} = DiGraph.Vertex(origin)')
+            #exec(f'self.addVertex({origin})')
 
             
 
 
         if not destExists:
-            #destVert = DiGraph.Vertex(dest)
-            #self.addVertex(destVert)
-            exec(f'{dest} = DiGraph.Vertex(dest)')
-            exec(f'self.addVertex({dest})')
+            destVert = DiGraph.Vertex(dest)
+            self.addVertex(destVert)
+            #exec(f'{dest} = DiGraph.Vertex(dest)')
+            #exec(f'self.addVertex({dest})')
 
-        #originVert.addEdge(DiGraph.Edge(destVert, weight))
-        edge = DiGraph.Edge(dest, weight)   # TODO fix edge dest is a string not a vertex 
-        exec(f'{origin}.addEdge(edge)')
+        edgeExists = False
+        for edge in originVert.edgesSet:
+            if edge.vertex.name == dest:
+                edgeExists = True
+                edge.weight = weight
+                break
+        
+        if edgeExists:
+            originVert.addEdge(DiGraph.Edge(destVert, weight))
+        #edge = DiGraph.Edge(dest, weight)   # TODO fix edge dest is a string not a vertex 
+        #exec(f'{origin}.addEdge(edge)')
 
         edgesNum = 0
         for vertex in self.vertexSet:

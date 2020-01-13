@@ -163,7 +163,8 @@ class DiGraph:
                     smaller = cost
                     topVert = vertex
             toplist.append(f'{topVert}:{smaller}')
-            costs.pop(topVert)
+            if topVert != None:
+                costs.pop(topVert)
             topK -= 1
         return toplist
                 

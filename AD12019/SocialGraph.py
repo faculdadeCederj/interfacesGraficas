@@ -1,11 +1,12 @@
 import DiGraph
 import sys
-commands = sys.argv[1]
+#commands = sys.argv[1]
 
 # cria um grafo de amigos para uma rede social
 class SocialGraph(DiGraph.DiGraph):
     def __init__(self, inputfile):
-        super().__init__(self)
+        self.vertexSet = set()
+        super().__init__(self.vertexSet)
 
         # opening the inputfile and writing the output in outfile
         with open(inputfile, 'r') as input:
@@ -30,7 +31,7 @@ class SocialGraph(DiGraph.DiGraph):
     def add(self, args):
         origin = args[0]
         dest = args[1]
-        weight = args[2]
+        weight = int(args[2])
 
         originExists = False
         destExists = False
@@ -38,19 +39,37 @@ class SocialGraph(DiGraph.DiGraph):
         for vertex in self.vertexSet:
             if origin == vertex.name:
                 originExists = True
+                originVert = vertex
+                exec(f'{origin} = DiGraph.Vertex(origin)')
+                exec(f'self.addVertex({origin})')
+                break
             
             if dest == vertex.name:
                 destExists = True
+                destVert = vertex
+                exec(f'{dest} = DiGraph.Vertex(dest)')
+                exec(f'self.addVertex({dest})')
+                break
 
-        if originExists:
-            origin = DiGraph.Vertex(origin)
-            self.addVertex(origin)
+        if not originExists:
+            #originVert = DiGraph.Vertex(origin)
+            #self.addVertex(originVert)
+            exec(f'{origin} = DiGraph.Vertex(origin)')
+            exec(f'self.addVertex({origin})')
 
-        if destExists:
-            dest = DiGraph.Vertex(dest)
-            self.addVertex(dest)
+            
 
-        origin.addEdge(DiGraph.Edge(dest, weight))
+
+        if not destExists:
+            #destVert = DiGraph.Vertex(dest)
+            #self.addVertex(destVert)
+            exec(f'{dest} = DiGraph.Vertex(dest)')
+            exec(f'self.addVertex({dest})')
+
+        #originVert.addEdge(DiGraph.Edge(destVert, weight))
+        Digraph = DiGraph
+        edge = DiGraph.Edge(dest, weight)
+        exec(f'{origin}.addEdge(Digraph.Edge(edge))')
 
         edgesNum = 0
         for vertex in self.vertexSet:
@@ -61,6 +80,11 @@ class SocialGraph(DiGraph.DiGraph):
 
     def remove(self, args):
         vert = args[0]
+
+        for vertex in self.vertexSet:
+            if vertex == vert:
+                vert = vertex
+                break
 
         self.removeVertex(vert)
 
@@ -73,7 +97,7 @@ class SocialGraph(DiGraph.DiGraph):
 
     def showFriends(self, args):
         vertex = args[0]
-        self.showEdges(vertex)
+        return self.showEdges(vertex)
 
     def shortestPath(self, args):
         origin = args[0]
@@ -83,9 +107,16 @@ class SocialGraph(DiGraph.DiGraph):
     def recommendFriends(self, args):
         baseVertex = args[0]
         mesure = args[1]
-        topK = args[2]
+        topK = int(args[2])
+
+        for vert in self.vertexSet:
+            if baseVertex == vert.name:
+                baseVertex = vert
+                break
+
         return self.topVertex(baseVertex, mesure, topK)
 
 if __name__ == '__main__':
     # running must be `python3 SocialGraph.py infile.txt`
-    graph = SocialGraph(commands)
+    #graph = SocialGraph(commands)
+    graph = SocialGraph('./AD12019/infile.txt')

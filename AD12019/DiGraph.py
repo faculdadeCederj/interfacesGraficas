@@ -40,7 +40,7 @@ class DiGraph:
         self.vertexSet = vertexSet
 
     def showEdges(self, vertex):
-        print(vertex)
+        return vertex.__str__()
 
     def addVertex(self, vertex):
         if 'Vertex' in str(type(vertex)):
@@ -108,18 +108,25 @@ class DiGraph:
 
     def topVertex(self, baseVertex, mesure, topK):
         costs = dict()
+        unvisitedEdge = set()
+
         for vertex in self.vertexSet:
             if vertex == baseVertex:
                 costs[vertex.name] = 0
             else:
                 costs[vertex.name] = float('inf')
+            for edge in vertex.edgesSet:
+                unvisitedEdge.add(edge)
 
         def calculateCost(vert):
             for edge in vert.edgesSet:
-                calc = costs[vert.name] + edge.weight
-                if calc < costs[edge.vertex.name]:
-                    costs[edge.vertex.name] = calc
-                calculateCost(edge.vertex)
+                if edge in unvisitedEdge:
+                    calc = costs[vert.name] + edge.weight
+                    if calc < costs[edge.vertex.name]:
+                        costs[edge.vertex.name] = calc
+                    
+                    unvisitedEdge.remove(edge)
+                    calculateCost(edge.vertex)
         
         calculateCost(baseVertex)
 
@@ -184,7 +191,7 @@ if __name__ == '__main__':
     julia.addEdge(Edge(rosicreida, 1))
 
     digrafo = DiGraph(vertices)
-    digrafo.showEdges(joao)
+    print(digrafo.showEdges(joao))
 ##########################################
 
     joaquina = Vertex('joaquina')

@@ -67,9 +67,8 @@ class SocialGraph(DiGraph.DiGraph):
             exec(f'self.addVertex({dest})')
 
         #originVert.addEdge(DiGraph.Edge(destVert, weight))
-        Digraph = DiGraph
-        edge = DiGraph.Edge(dest, weight)
-        exec(f'{origin}.addEdge(Digraph.Edge(edge))')
+        edge = DiGraph.Edge(dest, weight)   # TODO fix edge dest is a string not a vertex 
+        exec(f'{origin}.addEdge(edge)')
 
         edgesNum = 0
         for vertex in self.vertexSet:
@@ -107,7 +106,7 @@ class SocialGraph(DiGraph.DiGraph):
     def recommendFriends(self, args):
         baseVertex = args[0]
         mesure = args[1]
-        topK = int(args[2])
+        topK = int(args[2]) # TODO fix edge.vertex.name call, calls a str without attr name 
 
         for vert in self.vertexSet:
             if baseVertex == vert.name:

@@ -61,7 +61,7 @@ class DiGraph:
         for vertex in unvisited:
             prev[vertex] = None
             
-            if vertex == vertexBase:
+            if vertex == vertexBase: #TODO fix near issue
                 cost[vertex] = 0
             else:
                 cost[vertex] = float('inf')

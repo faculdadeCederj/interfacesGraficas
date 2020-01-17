@@ -106,9 +106,18 @@ class SocialGraph(DiGraph.DiGraph):
         vertex = args[0]
         return self.showEdges(vertex)
 
-    def shortestPath(self, args):
-        origin = args[0]
+    def shortestPath(self, args): # TODO fix data structures work between shortestPath and Dijkstra
+        origin = args[0]          # problems in dijkstra ln 61-79 with near variable and edges sets  
         dest = args[1]
+
+        vertDict = dict()
+
+        for vertex in self.vertexSet:
+            vertDict[vertex.name] = vertex
+
+        origin = vertDict[origin]
+        dest = vertDict[dest]
+
         return self.Dijkstra(origin, dest)
 
     def recommendFriends(self, args):

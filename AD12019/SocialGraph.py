@@ -33,6 +33,8 @@ class SocialGraph(DiGraph.DiGraph):
         dest = args[1]
         weight = int(args[2])
 
+        # TODO fix issue in doubled vertex and empty edges set
+        
         originExists = False
         destExists = False
 

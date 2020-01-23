@@ -2,6 +2,9 @@ import DiGraph
 import sys
 #commands = sys.argv[1]
 
+# TODO show commands in outfile before the results
+# TODO create docfile using doxygen
+
 # cria um grafo de amigos para uma rede social
 class SocialGraph(DiGraph.DiGraph):
     def __init__(self, inputfile):
@@ -75,7 +78,7 @@ class SocialGraph(DiGraph.DiGraph):
         
         if not edgeExists:
             originVert.addEdge(DiGraph.Edge(destVert, weight))
-        #edge = DiGraph.Edge(dest, weight)   # TODO fix edge dest is a string not a vertex 
+        #edge = DiGraph.Edge(dest, weight)   
         #exec(f'{origin}.addEdge(edge)')
 
         edgesNum = 0
@@ -89,17 +92,17 @@ class SocialGraph(DiGraph.DiGraph):
         vert = args[0]
 
         for vertex in self.vertexSet:
-            if vertex == vert:
+            if vertex.name == vert:
                 vert = vertex
                 break
 
         self.removeVertex(vert)
 
-        edgesNum = 0
+        edgesNum = 0 
         for vertex in self.vertexSet:
             edgesNum += len(vertex.edgesSet)
 
-        return f'addEdge: (True) - {edgesNum} edges, {len(self.vertexSet)} vertices '
+        return f'remove: (True) - {edgesNum} edges, {len(self.vertexSet)} vertices '
 
 
     def showFriends(self, args):
@@ -111,8 +114,8 @@ class SocialGraph(DiGraph.DiGraph):
 
         return self.showEdges(vertex)
 
-    def shortestPath(self, args): # TODO fix data structures work between shortestPath and Dijkstra
-        origin = args[0]          # problems in dijkstra ln 61-79 with near variable and edges sets  
+    def shortestPath(self, args): 
+        origin = args[0]            
         dest = args[1]
 
         vertDict = dict()
@@ -128,14 +131,23 @@ class SocialGraph(DiGraph.DiGraph):
     def recommendFriends(self, args):
         baseVertex = args[0]
         mesure = args[1]
-        topK = int(args[2]) # TODO fix edge.vertex.name call, calls a str without attr name 
+        topK = int(args[2])  
 
         for vert in self.vertexSet:
             if baseVertex == vert.name:
                 baseVertex = vert
                 break
 
-        return self.topVertex(baseVertex, mesure, topK)
+        auxList = self.topVertex(baseVertex, mesure, topK)
+        returnList = list()
+
+        for vertex in auxList:
+            if 'inf' in vertex:
+                continue
+            else:
+                returnList.append(vertex)
+
+        return returnList
 
 if __name__ == '__main__':
     # running must be `python3 SocialGraph.py infile.txt`

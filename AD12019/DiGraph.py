@@ -52,6 +52,18 @@ class DiGraph:
         if 'Vertex' in str(type(vertex)):
             self.vertexSet.remove(vertex)
 
+        
+        for vert in self.vertexSet:
+            newEdgesSet = set()
+
+            for edge in vert.edgesSet:
+                if edge.vertex == vertex:
+                    continue
+                else:
+                    newEdgesSet.add(edge)
+
+            vert.edgesSet = newEdgesSet
+
     def Dijkstra(self, vertexBase, vertexDest):
         #criando listas para uso do algoritmo
         unvisited = self.vertexSet.copy()

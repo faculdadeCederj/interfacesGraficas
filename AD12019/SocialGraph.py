@@ -104,6 +104,11 @@ class SocialGraph(DiGraph.DiGraph):
 
     def showFriends(self, args):
         vertex = args[0]
+
+        for vert in self.vertexSet:
+            if vert.name == vertex:
+                vertex = vert
+
         return self.showEdges(vertex)
 
     def shortestPath(self, args): # TODO fix data structures work between shortestPath and Dijkstra

@@ -11,19 +11,19 @@ addEdge: (True) - 9 edges, 6 vertices
 addEdge: (True) - 10 edges, 7 vertices 
 addEdge: (True) - 11 edges, 8 vertices 
 addEdge: (True) - 12 edges, 8 vertices 
-James
-Larry
-Liam
-Jim
-Keith
-Kaith
+{<Larry, 2>, <Liam, 1>, <Jim, 2>}
+{<Kaith, 1>}
+{<Paul, 2>, <Jim, 1>, <Keith, 1>, <Kaith, 3>}
+{<Keith, 1>}
+{<Jim, 1>}
+{}
 ['Keith:2', 'Kaith:3']
 ['Keith:22', 'Kaith:33', 'Paul:35', 'Pie:59', 'None:inf']
-['Kaith:inf', 'James:inf', 'Larry:inf', 'Pie:inf', 'Liam:inf']
-['Pie:4', 'James:inf', 'Larry:inf', 'None:inf', 'None:inf']
+['Liam:inf', 'Kaith:inf', 'Larry:inf', 'James:inf', 'Paul:inf']
+['Pie:4', 'Larry:inf', 'James:inf', 'None:inf', 'None:inf']
 [<James, 0>,<Liam, 1>,<Paul, 3>]
 [<James, 0>,<Larry, 2>,<Kaith, 3>]
 [<James, 0>,<Liam, 1>,<Paul, 3>,<Pie, 5>]
 addEdge: (True) - 12 edges, 8 vertices 
-Liam
-James
+{<Paul, 2>, <Jim, 1>, <Keith, 1>, <Kaith, 3>}
+{<Larry, 2>, <Liam, 1>, <Jim, 2>}

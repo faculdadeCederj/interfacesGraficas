@@ -17,15 +17,15 @@ class SocialGraph(DiGraph.DiGraph):
                 arguments = allcommand
                 with open('outfile.txt', 'a') as output:
                     if command == 'add':
-                        output.write(self.add(arguments))
+                        output.write(self.add(arguments) + '\n')
                     elif command == 'remove':
-                        output.write(self.remove(arguments))
+                        output.write(self.remove(arguments) + '\n')
                     elif command == 'showFriends':
-                        output.write(self.showFriends(arguments))
+                        output.write(self.showFriends(arguments) + '\n')
                     elif command == 'shortestPath':
-                        output.write(self.shortestPath(arguments))
+                        output.write(self.shortestPath(arguments) + '\n')
                     elif command == 'recommendFriends':
-                        output.write(str(self.recommendFriends(arguments)))
+                        output.write(str(self.recommendFriends(arguments))+'\n')
 
 
     def add(self, args):
@@ -44,14 +44,12 @@ class SocialGraph(DiGraph.DiGraph):
                 originVert = vertex
                 #exec(f'{origin} = DiGraph.Vertex(origin)')
                 #exec(f'self.addVertex({origin})')
-                break
             
             if dest == vertex.name:
                 destExists = True
                 destVert = vertex
                 #exec(f'{dest} = DiGraph.Vertex(dest)')
                 #exec(f'self.addVertex({dest})')
-                break
 
         if not originExists:
             originVert = DiGraph.Vertex(origin)
@@ -75,7 +73,7 @@ class SocialGraph(DiGraph.DiGraph):
                 edge.weight = weight
                 break
         
-        if edgeExists:
+        if not edgeExists:
             originVert.addEdge(DiGraph.Edge(destVert, weight))
         #edge = DiGraph.Edge(dest, weight)   # TODO fix edge dest is a string not a vertex 
         #exec(f'{origin}.addEdge(edge)')
@@ -84,7 +82,7 @@ class SocialGraph(DiGraph.DiGraph):
         for vertex in self.vertexSet:
             edgesNum += len(vertex.edgesSet)
 
-        return f'addEdge: (True) - {edgesNum} edges, {len(self.vertexSet)} vertices'
+        return f'addEdge: (True) - {edgesNum} edges, {len(self.vertexSet)} vertices '
         
 
     def remove(self, args):
@@ -101,7 +99,7 @@ class SocialGraph(DiGraph.DiGraph):
         for vertex in self.vertexSet:
             edgesNum += len(vertex.edgesSet)
 
-        return f'addEdge: (True) - {edgesNum} edges, {len(self.vertexSet)} vertices'
+        return f'addEdge: (True) - {edgesNum} edges, {len(self.vertexSet)} vertices '
 
 
     def showFriends(self, args):

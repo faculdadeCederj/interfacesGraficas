@@ -1,18 +1,29 @@
-addEdge: (True) - 0 edges, 2 vertices
-addEdge: (True) - 0 edges, 3 vertices
-addEdge: (True) - 0 edges, 4 vertices
-addEdge: (True) - 0 edges, 5 vertices
-addEdge: (True) - 0 edges, 6 vertices
-addEdge: (True) - 0 edges, 7 vertices
-addEdge: (True) - 0 edges, 8 vertices
-addEdge: (True) - 0 edges, 9 vertices
-addEdge: (True) - 0 edges, 10 vertices
-addEdge: (True) - 0 edges, 11 vertices
-addEdge: (True) - 0 edges, 12 vertices
-addEdge: (True) - 0 edges, 13 vertices
-addEdge: (True) - 0 edges, 14 vertices
-JamesLarryLiamJimKeithKaith
-['Keith:inf', 'Liam:inf']
-['None:inf', 'None:inf', 'None:inf', 'None:inf', 'None:inf']
-['Liam:inf', 'Paul:inf', 'James:inf', 'Kaith:inf', 'Pie:inf']
-['Keith:inf', 'Paul:inf', 'James:inf', 'Kaith:inf', 'Pie:inf']
+addEdge: (True) - 1 edges, 2 vertices 
+addEdge: (True) - 1 edges, 2 vertices 
+addEdge: (True) - 2 edges, 3 vertices 
+addEdge: (True) - 3 edges, 4 vertices 
+addEdge: (True) - 4 edges, 5 vertices 
+addEdge: (True) - 5 edges, 6 vertices 
+addEdge: (True) - 6 edges, 6 vertices 
+addEdge: (True) - 7 edges, 6 vertices 
+addEdge: (True) - 8 edges, 6 vertices 
+addEdge: (True) - 9 edges, 6 vertices 
+addEdge: (True) - 10 edges, 7 vertices 
+addEdge: (True) - 11 edges, 8 vertices 
+addEdge: (True) - 12 edges, 8 vertices 
+James
+Larry
+Liam
+Jim
+Keith
+Kaith
+['Keith:2', 'Kaith:3']
+['Keith:22', 'Kaith:33', 'Paul:35', 'Pie:59', 'None:inf']
+['Kaith:inf', 'James:inf', 'Larry:inf', 'Pie:inf', 'Liam:inf']
+['Pie:4', 'James:inf', 'Larry:inf', 'None:inf', 'None:inf']
+[<James, 0>,<Liam, 1>,<Paul, 3>]
+[<James, 0>,<Larry, 2>,<Kaith, 3>]
+[<James, 0>,<Liam, 1>,<Paul, 3>,<Pie, 5>]
+addEdge: (True) - 12 edges, 8 vertices 
+Liam
+James

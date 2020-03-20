@@ -1,0 +1,89 @@
+\begin{theindex}
+
+  \item {\_\_init\_\_}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{10}
+
+  \indexspace
+
+  \item {countMatchesWithLeftShift}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{10}
+  \item {countMatchesWithRightShift}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{11}
+  \item {createComplement}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{11}
+
+  \indexspace
+
+  \item {DNAStrand}, \hyperpage{7}
+    \subitem {main}, \hyperpage{7}
+  \item {DNAStrand.DNAStrand}, \hyperpage{9}
+    \subitem {\_\_init\_\_}, \hyperpage{10}
+    \subitem {countMatchesWithLeftShift}, \hyperpage{10}
+    \subitem {countMatchesWithRightShift}, \hyperpage{11}
+    \subitem {createComplement}, \hyperpage{11}
+    \subitem {findMatchesWithLeftShift}, \hyperpage{11}
+    \subitem {findMatchesWithRightShift}, \hyperpage{12}
+    \subitem {findMaxPossibleMatches}, \hyperpage{12}
+    \subitem {isValid}, \hyperpage{13}
+    \subitem {letterCount}, \hyperpage{13}
+    \subitem {matches}, \hyperpage{13}
+  \item {DNAStrandTest}, \hyperpage{8}
+  \item {DNAStrandTest.DNAStrandTest}, \hyperpage{14}
+    \subitem {test\_countMatchesWithLeftShift}, \hyperpage{15}
+    \subitem {test\_countMatchesWithRightShift}, \hyperpage{15}
+    \subitem {test\_createComplement}, \hyperpage{15}
+    \subitem {test\_findMatchesWithLeftShift}, \hyperpage{15}
+    \subitem {test\_findMatchesWithRightShift}, \hyperpage{16}
+    \subitem {test\_findMaxPossibleMatches}, \hyperpage{16}
+    \subitem {test\_isValid}, \hyperpage{16}
+    \subitem {test\_letterCount}, \hyperpage{16}
+    \subitem {test\_matches}, \hyperpage{16}
+
+  \indexspace
+
+  \item {findMatchesWithLeftShift}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{11}
+  \item {findMatchesWithRightShift}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{12}
+  \item {findMaxPossibleMatches}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{12}
+
+  \indexspace
+
+  \item {isValid}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{13}
+
+  \indexspace
+
+  \item {letterCount}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{13}
+
+  \indexspace
+
+  \item {main}
+    \subitem {DNAStrand}, \hyperpage{7}
+  \item {matches}
+    \subitem {DNAStrand.DNAStrand}, \hyperpage{13}
+
+  \indexspace
+
+  \item {test\_countMatchesWithLeftShift}
+    \subitem {DNAStrandTest.DNAStrandTest}, \hyperpage{15}
+  \item {test\_countMatchesWithRightShift}
+    \subitem {DNAStrandTest.DNAStrandTest}, \hyperpage{15}
+  \item {test\_createComplement}
+    \subitem {DNAStrandTest.DNAStrandTest}, \hyperpage{15}
+  \item {test\_findMatchesWithLeftShift}
+    \subitem {DNAStrandTest.DNAStrandTest}, \hyperpage{15}
+  \item {test\_findMatchesWithRightShift}
+    \subitem {DNAStrandTest.DNAStrandTest}, \hyperpage{16}
+  \item {test\_findMaxPossibleMatches}
+    \subitem {DNAStrandTest.DNAStrandTest}, \hyperpage{16}
+  \item {test\_isValid}
+    \subitem {DNAStrandTest.DNAStrandTest}, \hyperpage{16}
+  \item {test\_letterCount}
+    \subitem {DNAStrandTest.DNAStrandTest}, \hyperpage{16}
+  \item {test\_matches}
+    \subitem {DNAStrandTest.DNAStrandTest}, \hyperpage{16}
+
+\end{theindex}

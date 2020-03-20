@@ -1,0 +1,234 @@
+\hypertarget{classDNAStrand_1_1DNAStrand}{}\doxysection{D\+N\+A\+Strand.\+D\+N\+A\+Strand Class Reference}
+\label{classDNAStrand_1_1DNAStrand}\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+
+
+Class that implements a simple model of a D\+NA Strand, with a sequence of characters \textquotesingle{}A\textquotesingle{}, \textquotesingle{}G\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, \textquotesingle{}T\textquotesingle{}.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_a399ed979a8105c5ef574838f7be2febb}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, given\+Data)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}} with the given string of data, normally consisting of characters \textquotesingle{}A\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, \textquotesingle{}G\textquotesingle{}, and \textquotesingle{}T\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_a64eb419faf68750bc5dcb0f7ef83a304}\label{classDNAStrand_1_1DNAStrand_a64eb419faf68750bc5dcb0f7ef83a304}} 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_a64eb419faf68750bc5dcb0f7ef83a304}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Returns a string representing the strand data of this \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_aa15b1c02f8ef7de17946aeebc725829c}{create\+Complement}} (self)
+\begin{DoxyCompactList}\small\item\em Returns a new \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}} that is the complement of this one, that is, \textquotesingle{}A\textquotesingle{} is replaced with \textquotesingle{}T\textquotesingle{} and so on. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_a5582991f89addc1bbd68d149e7562531}{find\+Matches\+With\+Left\+Shift}} (self, other, shift)
+\begin{DoxyCompactList}\small\item\em Returns a string showing which characters in this strand are matched with \textquotesingle{}other\textquotesingle{}, when shifted left by the given amount. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_ad63b121e28ca8afd145ab753d7252f19}{find\+Matches\+With\+Right\+Shift}} (self, other, shift)
+\begin{DoxyCompactList}\small\item\em Returns a string showing which characters in this strand are matched with \textquotesingle{}other\textquotesingle{}, when shifted right by the given amount. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_af5bd4ff48b75b3a3287956d992233370}{find\+Max\+Possible\+Matches}} (self, other)
+\begin{DoxyCompactList}\small\item\em Returns the maximum possible number of matching base pairs, when the given sequence is shifted left or right by any amount. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_abda3b64fdaef6df0757ac2b43b4ae21d}{count\+Matches\+With\+Left\+Shift}} (self, other, shift)
+\begin{DoxyCompactList}\small\item\em Returns the number of matching pairs, when \textquotesingle{}other\textquotesingle{} is shifted to the left by \textquotesingle{}shift\textquotesingle{} positions. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_aeaf4c0a5f7acc617e1df72e629fec50b}{count\+Matches\+With\+Right\+Shift}} (self, other, shift)
+\begin{DoxyCompactList}\small\item\em Returns the number of matching pairs, when \textquotesingle{}other\textquotesingle{} is shifted to the right by \textquotesingle{}shift\textquotesingle{} positions. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_a0d96a0a268fd03a04425b796f7ad88a0}{is\+Valid}} (self)
+\begin{DoxyCompactList}\small\item\em Determines whether all characters in this strand are valid (\textquotesingle{}A\textquotesingle{}, \textquotesingle{}G\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, or \textquotesingle{}T\textquotesingle{}). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_a40f960bd9b5511694e330e2c5e5fbb86}{letter\+Count}} (self, ch)
+\begin{DoxyCompactList}\small\item\em Counts the number of occurrences of the given character in this strand. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrand_1_1DNAStrand_a41efcc72d9d99fcdac633e751e309fa9}{matches}} (self, c1, c2)
+\begin{DoxyCompactList}\small\item\em Returns True if the two characters form a base pair (\textquotesingle{}A\textquotesingle{} with \textquotesingle{}T\textquotesingle{} or \textquotesingle{}C\textquotesingle{} with \textquotesingle{}G\textquotesingle{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_aa00cf066d3a59bac680280478fefbda5}\label{classDNAStrand_1_1DNAStrand_aa00cf066d3a59bac680280478fefbda5}} 
+\mbox{\hyperlink{classDNAStrand_1_1DNAStrand_aa00cf066d3a59bac680280478fefbda5}{strand}}
+\begin{DoxyCompactList}\small\item\em Strand of this D\+NA, in upper case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that implements a simple model of a D\+NA Strand, with a sequence of characters \textquotesingle{}A\textquotesingle{}, \textquotesingle{}G\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, \textquotesingle{}T\textquotesingle{}. 
+
+\textquotesingle{}A\textquotesingle{} char corresponds to \textquotesingle{}T\textquotesingle{}, and \textquotesingle{}C\textquotesingle{} char to \textquotesingle{}G\textquotesingle{}, those chars form a base pair each. All the methods within this class are used for the manipulation and study of the D\+N\+A\+Strands. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_a399ed979a8105c5ef574838f7be2febb}\label{classDNAStrand_1_1DNAStrand_a399ed979a8105c5ef574838f7be2febb}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{given\+Data }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}} with the given string of data, normally consisting of characters \textquotesingle{}A\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, \textquotesingle{}G\textquotesingle{}, and \textquotesingle{}T\textquotesingle{}. 
+
+Raises a Value\+Error exception, in case of an invalid given\+Data strand.
+
+
+\begin{DoxyParams}{Parameters}
+{\em given\+Data} & string of characters for this \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_abda3b64fdaef6df0757ac2b43b4ae21d}\label{classDNAStrand_1_1DNAStrand_abda3b64fdaef6df0757ac2b43b4ae21d}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!countMatchesWithLeftShift@{countMatchesWithLeftShift}}
+\index{countMatchesWithLeftShift@{countMatchesWithLeftShift}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{countMatchesWithLeftShift()}{countMatchesWithLeftShift()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+count\+Matches\+With\+Left\+Shift (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other,  }\item[{}]{shift }\end{DoxyParamCaption})}
+
+
+
+Returns the number of matching pairs, when \textquotesingle{}other\textquotesingle{} is shifted to the left by \textquotesingle{}shift\textquotesingle{} positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & given \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}} to match with this strand. \\
+\hline
+{\em shift} & number of positions to shift other to the left. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of matching pairs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_aeaf4c0a5f7acc617e1df72e629fec50b}\label{classDNAStrand_1_1DNAStrand_aeaf4c0a5f7acc617e1df72e629fec50b}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!countMatchesWithRightShift@{countMatchesWithRightShift}}
+\index{countMatchesWithRightShift@{countMatchesWithRightShift}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{countMatchesWithRightShift()}{countMatchesWithRightShift()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+count\+Matches\+With\+Right\+Shift (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other,  }\item[{}]{shift }\end{DoxyParamCaption})}
+
+
+
+Returns the number of matching pairs, when \textquotesingle{}other\textquotesingle{} is shifted to the right by \textquotesingle{}shift\textquotesingle{} positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & given \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}} to be matched with this one. \\
+\hline
+{\em shift} & number of positions to shift other to the right. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of matching pairs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_aa15b1c02f8ef7de17946aeebc725829c}\label{classDNAStrand_1_1DNAStrand_aa15b1c02f8ef7de17946aeebc725829c}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!createComplement@{createComplement}}
+\index{createComplement@{createComplement}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{createComplement()}{createComplement()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+create\+Complement (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns a new \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}} that is the complement of this one, that is, \textquotesingle{}A\textquotesingle{} is replaced with \textquotesingle{}T\textquotesingle{} and so on. 
+
+\begin{DoxyReturn}{Returns}
+complement of this D\+NA. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_a5582991f89addc1bbd68d149e7562531}\label{classDNAStrand_1_1DNAStrand_a5582991f89addc1bbd68d149e7562531}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!findMatchesWithLeftShift@{findMatchesWithLeftShift}}
+\index{findMatchesWithLeftShift@{findMatchesWithLeftShift}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{findMatchesWithLeftShift()}{findMatchesWithLeftShift()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+find\+Matches\+With\+Left\+Shift (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other,  }\item[{}]{shift }\end{DoxyParamCaption})}
+
+
+
+Returns a string showing which characters in this strand are matched with \textquotesingle{}other\textquotesingle{}, when shifted left by the given amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & given \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}}. \\
+\hline
+{\em shift} & number of positions to shift other to the left. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a copy of this strand, where matched characters are upper case and unmatched, lower case. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_ad63b121e28ca8afd145ab753d7252f19}\label{classDNAStrand_1_1DNAStrand_ad63b121e28ca8afd145ab753d7252f19}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!findMatchesWithRightShift@{findMatchesWithRightShift}}
+\index{findMatchesWithRightShift@{findMatchesWithRightShift}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{findMatchesWithRightShift()}{findMatchesWithRightShift()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+find\+Matches\+With\+Right\+Shift (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other,  }\item[{}]{shift }\end{DoxyParamCaption})}
+
+
+
+Returns a string showing which characters in this strand are matched with \textquotesingle{}other\textquotesingle{}, when shifted right by the given amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & given \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}}. \\
+\hline
+{\em shift} & number of positions to shift other to the right. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a copy of this strand, where matched characters are upper case and unmatched, lower case. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_af5bd4ff48b75b3a3287956d992233370}\label{classDNAStrand_1_1DNAStrand_af5bd4ff48b75b3a3287956d992233370}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!findMaxPossibleMatches@{findMaxPossibleMatches}}
+\index{findMaxPossibleMatches@{findMaxPossibleMatches}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{findMaxPossibleMatches()}{findMaxPossibleMatches()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+find\+Max\+Possible\+Matches (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{other }\end{DoxyParamCaption})}
+
+
+
+Returns the maximum possible number of matching base pairs, when the given sequence is shifted left or right by any amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & given \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand}} to be matched with this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+maximum number of matching pairs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_a0d96a0a268fd03a04425b796f7ad88a0}\label{classDNAStrand_1_1DNAStrand_a0d96a0a268fd03a04425b796f7ad88a0}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!isValid@{isValid}}
+\index{isValid@{isValid}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+is\+Valid (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Determines whether all characters in this strand are valid (\textquotesingle{}A\textquotesingle{}, \textquotesingle{}G\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, or \textquotesingle{}T\textquotesingle{}). 
+
+\begin{DoxyReturn}{Returns}
+True if valid, and False otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_a40f960bd9b5511694e330e2c5e5fbb86}\label{classDNAStrand_1_1DNAStrand_a40f960bd9b5511694e330e2c5e5fbb86}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!letterCount@{letterCount}}
+\index{letterCount@{letterCount}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{letterCount()}{letterCount()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+letter\+Count (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ch }\end{DoxyParamCaption})}
+
+
+
+Counts the number of occurrences of the given character in this strand. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & given character. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of occurrences of ch. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDNAStrand_1_1DNAStrand_a41efcc72d9d99fcdac633e751e309fa9}\label{classDNAStrand_1_1DNAStrand_a41efcc72d9d99fcdac633e751e309fa9}} 
+\index{DNAStrand.DNAStrand@{DNAStrand.DNAStrand}!matches@{matches}}
+\index{matches@{matches}!DNAStrand.DNAStrand@{DNAStrand.DNAStrand}}
+\doxysubsubsection{\texorpdfstring{matches()}{matches()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand.\+D\+N\+A\+Strand.\+matches (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{c1,  }\item[{}]{c2 }\end{DoxyParamCaption})}
+
+
+
+Returns True if the two characters form a base pair (\textquotesingle{}A\textquotesingle{} with \textquotesingle{}T\textquotesingle{} or \textquotesingle{}C\textquotesingle{} with \textquotesingle{}G\textquotesingle{}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c1} & first character. \\
+\hline
+{\em c2} & second character. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if they form a base pair, and False otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+N\+A\+Strand.\+py\end{DoxyCompactItemize}

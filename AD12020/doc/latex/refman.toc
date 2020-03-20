@@ -1,0 +1,42 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}% 
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}% 
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}% 
+\contentsline {chapter}{\numberline {4}Namespace Documentation}{7}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}N\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Strand Namespace Reference}{7}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}Function Documentation}{7}{subsection.4.1.2}% 
+\contentsline {subsubsection}{\numberline {4.1.2.1}main()}{7}{subsubsection.4.1.2.1}% 
+\contentsline {section}{\numberline {4.2}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}N\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Strand\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Test Namespace Reference}{8}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{8}{subsection.4.2.1}% 
+\contentsline {chapter}{\numberline {5}Class Documentation}{9}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}N\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Strand.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}N\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Strand Class Reference}{9}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{10}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Constructor \& Destructor Documentation}{10}{subsection.5.1.2}% 
+\contentsline {subsubsection}{\numberline {5.1.2.1}\_\_init\_\_()}{10}{subsubsection.5.1.2.1}% 
+\contentsline {subsection}{\numberline {5.1.3}Member Function Documentation}{10}{subsection.5.1.3}% 
+\contentsline {subsubsection}{\numberline {5.1.3.1}countMatchesWithLeftShift()}{10}{subsubsection.5.1.3.1}% 
+\contentsline {subsubsection}{\numberline {5.1.3.2}countMatchesWithRightShift()}{11}{subsubsection.5.1.3.2}% 
+\contentsline {subsubsection}{\numberline {5.1.3.3}createComplement()}{11}{subsubsection.5.1.3.3}% 
+\contentsline {subsubsection}{\numberline {5.1.3.4}findMatchesWithLeftShift()}{11}{subsubsection.5.1.3.4}% 
+\contentsline {subsubsection}{\numberline {5.1.3.5}findMatchesWithRightShift()}{12}{subsubsection.5.1.3.5}% 
+\contentsline {subsubsection}{\numberline {5.1.3.6}findMaxPossibleMatches()}{12}{subsubsection.5.1.3.6}% 
+\contentsline {subsubsection}{\numberline {5.1.3.7}isValid()}{13}{subsubsection.5.1.3.7}% 
+\contentsline {subsubsection}{\numberline {5.1.3.8}letterCount()}{13}{subsubsection.5.1.3.8}% 
+\contentsline {subsubsection}{\numberline {5.1.3.9}matches()}{13}{subsubsection.5.1.3.9}% 
+\contentsline {section}{\numberline {5.2}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}N\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Strand\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Test.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}N\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Strand\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Test Class Reference}{14}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{15}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Member Function Documentation}{15}{subsection.5.2.2}% 
+\contentsline {subsubsection}{\numberline {5.2.2.1}test\_countMatchesWithLeftShift()}{15}{subsubsection.5.2.2.1}% 
+\contentsline {subsubsection}{\numberline {5.2.2.2}test\_countMatchesWithRightShift()}{15}{subsubsection.5.2.2.2}% 
+\contentsline {subsubsection}{\numberline {5.2.2.3}test\_createComplement()}{15}{subsubsection.5.2.2.3}% 
+\contentsline {subsubsection}{\numberline {5.2.2.4}test\_findMatchesWithLeftShift()}{16}{subsubsection.5.2.2.4}% 
+\contentsline {subsubsection}{\numberline {5.2.2.5}test\_findMatchesWithRightShift()}{16}{subsubsection.5.2.2.5}% 
+\contentsline {subsubsection}{\numberline {5.2.2.6}test\_findMaxPossibleMatches()}{16}{subsubsection.5.2.2.6}% 
+\contentsline {subsubsection}{\numberline {5.2.2.7}test\_isValid()}{16}{subsubsection.5.2.2.7}% 
+\contentsline {subsubsection}{\numberline {5.2.2.8}test\_letterCount()}{16}{subsubsection.5.2.2.8}% 
+\contentsline {subsubsection}{\numberline {5.2.2.9}test\_matches()}{17}{subsubsection.5.2.2.9}% 
+\contentsline {chapter}{Index}{19}{section*.9}% 

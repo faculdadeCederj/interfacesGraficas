@@ -1,0 +1,149 @@
+\hypertarget{classDNAStrandTest_1_1DNAStrandTest}{}\doxysection{D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test Class Reference}
+\label{classDNAStrandTest_1_1DNAStrandTest}\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+
+
+Class for testing certain aspects of the behavior of \mbox{\hyperlink{namespaceDNAStrand}{D\+N\+A\+Strand}}.  
+
+
+Inheritance diagram for D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDNAStrandTest_1_1DNAStrandTest}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_afde0f98f11e9ab9f913db39168e694c1}{test\+\_\+is\+Valid}} (self)
+\begin{DoxyCompactList}\small\item\em Test for is\+Valid method, should return a boolean indicating if the string given has only valid chars for the strand (true) ou not (false). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_aaf10de1c2a9c6edad40827786b6ce07e}{test\+\_\+create\+Complement}} (self)
+\begin{DoxyCompactList}\small\item\em Test for create\+Complement method, should return a string with the complement (all char matching with the given strand). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_ad383fefe0bd2fede27d5e74d2ac2e97f}{test\+\_\+find\+Matches\+With\+Left\+Shift}} (self)
+\begin{DoxyCompactList}\small\item\em Test for find\+Matches\+With\+Left\+Shift method, should return a string with the matching chars in uppercase and the non-\/matching in lowercase, when the \textquotesingle{}other\textquotesingle{} strand is shifted left. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_a664a998891dbd6aa7533190e6581dd72}{test\+\_\+find\+Matches\+With\+Right\+Shift}} (self)
+\begin{DoxyCompactList}\small\item\em Test for find\+Matches\+With\+Right\+Shift method, should return a string with the matching chars in uppercase and the non-\/matching in lowercase, when the \textquotesingle{}other\textquotesingle{} strand is shifted right One relation between strands was tested, with different shift values, looking towards negative indexes, 0 index and positive. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_af2b3b34be955ca02b1e9f503b1f90b6a}{test\+\_\+find\+Max\+Possible\+Matches}} (self)
+\begin{DoxyCompactList}\small\item\em Test for find\+Max\+Possible\+Matches method, should return an integer representing the maximum number of matches, independent of how many shifts are made with the strands. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_af80eb7443516843eca8221665435230a}{test\+\_\+count\+Matches\+With\+Left\+Shift}} (self)
+\begin{DoxyCompactList}\small\item\em Test for count\+Matches\+With\+Left\+Shift method, should return an integer representing the number of matches between the strands, when other is shifted left. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_a31af2a648f475249026cf397ef52f499}{test\+\_\+count\+Matches\+With\+Right\+Shift}} (self)
+\begin{DoxyCompactList}\small\item\em Test for count\+Matches\+With\+Right\+Shift method, should return an integer representing the number of matches between the strands, when other is shifted right. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_a8be14201b31bbf5d7e403e176dcc1592}{test\+\_\+letter\+Count}} (self)
+\begin{DoxyCompactList}\small\item\em Test for letter\+Count method, should return an integer representing the number of times the given character appears in the strand. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_a430ad21c740b4d80a5df22a8e8fde10d}{test\+\_\+matches}} (self)
+\begin{DoxyCompactList}\small\item\em Test for matches method, should return true if characters given matches and false if not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_a06db74632e15d5440381172ab6540165}\label{classDNAStrandTest_1_1DNAStrandTest_a06db74632e15d5440381172ab6540165}} 
+\mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_a06db74632e15d5440381172ab6540165}{d1}} = \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand.\+D\+N\+A\+Strand}}(\textquotesingle{}T\+C\+AT\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Two \mbox{\hyperlink{namespaceDNAStrand}{D\+N\+A\+Strand}} objects to be used in the tests. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_a439b50cf97c36a5ee80bd4113e5a8f4e}\label{classDNAStrandTest_1_1DNAStrandTest_a439b50cf97c36a5ee80bd4113e5a8f4e}} 
+\mbox{\hyperlink{classDNAStrandTest_1_1DNAStrandTest_a439b50cf97c36a5ee80bd4113e5a8f4e}{d2}} = \mbox{\hyperlink{classDNAStrand_1_1DNAStrand}{D\+N\+A\+Strand.\+D\+N\+A\+Strand}}(\textquotesingle{}A\+G\+A\+G\+C\+AT\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespaceDNAStrand}{D\+N\+A\+Strand}} object to be used in the tests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for testing certain aspects of the behavior of \mbox{\hyperlink{namespaceDNAStrand}{D\+N\+A\+Strand}}. 
+
+This class tests all \mbox{\hyperlink{namespaceDNAStrand}{D\+N\+A\+Strand}} methods with different inputs, and prints OK if the class passes all the tests. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_af80eb7443516843eca8221665435230a}\label{classDNAStrandTest_1_1DNAStrandTest_af80eb7443516843eca8221665435230a}} 
+\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}!test\_countMatchesWithLeftShift@{test\_countMatchesWithLeftShift}}
+\index{test\_countMatchesWithLeftShift@{test\_countMatchesWithLeftShift}!DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+\doxysubsubsection{\texorpdfstring{test\_countMatchesWithLeftShift()}{test\_countMatchesWithLeftShift()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test.\+test\+\_\+count\+Matches\+With\+Left\+Shift (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for count\+Matches\+With\+Left\+Shift method, should return an integer representing the number of matches between the strands, when other is shifted left. 
+
+One relation between strands was tested, with different shift values, looking towards negative indexes, 0 index and positive. ~\newline
+ \mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_a31af2a648f475249026cf397ef52f499}\label{classDNAStrandTest_1_1DNAStrandTest_a31af2a648f475249026cf397ef52f499}} 
+\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}!test\_countMatchesWithRightShift@{test\_countMatchesWithRightShift}}
+\index{test\_countMatchesWithRightShift@{test\_countMatchesWithRightShift}!DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+\doxysubsubsection{\texorpdfstring{test\_countMatchesWithRightShift()}{test\_countMatchesWithRightShift()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test.\+test\+\_\+count\+Matches\+With\+Right\+Shift (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for count\+Matches\+With\+Right\+Shift method, should return an integer representing the number of matches between the strands, when other is shifted right. 
+
+One relation between strands was tested, with different shift values, looking towards negative indexes, 0 index and positive. ~\newline
+ \mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_aaf10de1c2a9c6edad40827786b6ce07e}\label{classDNAStrandTest_1_1DNAStrandTest_aaf10de1c2a9c6edad40827786b6ce07e}} 
+\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}!test\_createComplement@{test\_createComplement}}
+\index{test\_createComplement@{test\_createComplement}!DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+\doxysubsubsection{\texorpdfstring{test\_createComplement()}{test\_createComplement()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test.\+test\+\_\+create\+Complement (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for create\+Complement method, should return a string with the complement (all char matching with the given strand). 
+
+Two strands where tested expecting correct complements. \mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_ad383fefe0bd2fede27d5e74d2ac2e97f}\label{classDNAStrandTest_1_1DNAStrandTest_ad383fefe0bd2fede27d5e74d2ac2e97f}} 
+\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}!test\_findMatchesWithLeftShift@{test\_findMatchesWithLeftShift}}
+\index{test\_findMatchesWithLeftShift@{test\_findMatchesWithLeftShift}!DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+\doxysubsubsection{\texorpdfstring{test\_findMatchesWithLeftShift()}{test\_findMatchesWithLeftShift()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test.\+test\+\_\+find\+Matches\+With\+Left\+Shift (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for find\+Matches\+With\+Left\+Shift method, should return a string with the matching chars in uppercase and the non-\/matching in lowercase, when the \textquotesingle{}other\textquotesingle{} strand is shifted left. 
+
+One relation between strands was tested, with different shift values, looking towards negative indexes, 0 index and positive. \mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_a664a998891dbd6aa7533190e6581dd72}\label{classDNAStrandTest_1_1DNAStrandTest_a664a998891dbd6aa7533190e6581dd72}} 
+\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}!test\_findMatchesWithRightShift@{test\_findMatchesWithRightShift}}
+\index{test\_findMatchesWithRightShift@{test\_findMatchesWithRightShift}!DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+\doxysubsubsection{\texorpdfstring{test\_findMatchesWithRightShift()}{test\_findMatchesWithRightShift()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test.\+test\+\_\+find\+Matches\+With\+Right\+Shift (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for find\+Matches\+With\+Right\+Shift method, should return a string with the matching chars in uppercase and the non-\/matching in lowercase, when the \textquotesingle{}other\textquotesingle{} strand is shifted right One relation between strands was tested, with different shift values, looking towards negative indexes, 0 index and positive. 
+
+~\newline
+ \mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_af2b3b34be955ca02b1e9f503b1f90b6a}\label{classDNAStrandTest_1_1DNAStrandTest_af2b3b34be955ca02b1e9f503b1f90b6a}} 
+\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}!test\_findMaxPossibleMatches@{test\_findMaxPossibleMatches}}
+\index{test\_findMaxPossibleMatches@{test\_findMaxPossibleMatches}!DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+\doxysubsubsection{\texorpdfstring{test\_findMaxPossibleMatches()}{test\_findMaxPossibleMatches()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test.\+test\+\_\+find\+Max\+Possible\+Matches (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for find\+Max\+Possible\+Matches method, should return an integer representing the maximum number of matches, independent of how many shifts are made with the strands. 
+
+One test was made, with the two strands given. \mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_afde0f98f11e9ab9f913db39168e694c1}\label{classDNAStrandTest_1_1DNAStrandTest_afde0f98f11e9ab9f913db39168e694c1}} 
+\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}!test\_isValid@{test\_isValid}}
+\index{test\_isValid@{test\_isValid}!DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+\doxysubsubsection{\texorpdfstring{test\_isValid()}{test\_isValid()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test.\+test\+\_\+is\+Valid (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for is\+Valid method, should return a boolean indicating if the string given has only valid chars for the strand (true) ou not (false). 
+
+Two strands where tested, both with valid outputs. \mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_a8be14201b31bbf5d7e403e176dcc1592}\label{classDNAStrandTest_1_1DNAStrandTest_a8be14201b31bbf5d7e403e176dcc1592}} 
+\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}!test\_letterCount@{test\_letterCount}}
+\index{test\_letterCount@{test\_letterCount}!DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+\doxysubsubsection{\texorpdfstring{test\_letterCount()}{test\_letterCount()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test.\+test\+\_\+letter\+Count (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for letter\+Count method, should return an integer representing the number of times the given character appears in the strand. 
+
+Were tested uppercase, lowercase and invalid letters. \mbox{\Hypertarget{classDNAStrandTest_1_1DNAStrandTest_a430ad21c740b4d80a5df22a8e8fde10d}\label{classDNAStrandTest_1_1DNAStrandTest_a430ad21c740b4d80a5df22a8e8fde10d}} 
+\index{DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}!test\_matches@{test\_matches}}
+\index{test\_matches@{test\_matches}!DNAStrandTest.DNAStrandTest@{DNAStrandTest.DNAStrandTest}}
+\doxysubsubsection{\texorpdfstring{test\_matches()}{test\_matches()}}
+{\footnotesize\ttfamily def D\+N\+A\+Strand\+Test.\+D\+N\+A\+Strand\+Test.\+test\+\_\+matches (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Test for matches method, should return true if characters given matches and false if not. 
+
+Where tested uppercase, lowercase, valid and invalid characters. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+N\+A\+Strand\+Test.\+py\end{DoxyCompactItemize}
